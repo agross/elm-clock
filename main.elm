@@ -24,7 +24,9 @@ main =
 
 update : Message -> Model -> ( Model, Cmd Message )
 update msg model =
-    ( model, Cmd.none )
+    case msg of
+        Tick time ->
+            ( time, Cmd.none )
 
 
 view : Model -> Html.Html Message
