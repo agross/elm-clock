@@ -18,7 +18,7 @@ main =
         { init = ( 0, Cmd.none )
         , update = update
         , view = view
-        , subscriptions = always Sub.none
+        , subscriptions = always everySecond
         }
 
 
