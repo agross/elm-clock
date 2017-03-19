@@ -30,3 +30,8 @@ update msg model =
 view : Model -> Html.Html Message
 view time =
     Html.text (toString time)
+
+
+everySecond : Sub Message
+everySecond =
+    Time.every Time.second Tick
